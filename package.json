@@ -1,0 +1,14 @@
+{
+  "name": "agro-facil-servidor",
+  "private": true,
+  "type": "module",
+  "description": "Robô do AGRO FÁCIL: API e execução das funções do produtor no SIARE (SEF-MG), para um cliente da PONTE.",
+  "engines": { "node": ">=22" },
+  "scripts": {
+    "start": "node servidor.mjs",
+    "test": "node --test \"testes/**/*.test.mjs\""
+  },
+  "dependencies": {
+    "puppeteer-core": "^24.43.1"
+  }
+}

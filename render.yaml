@@ -1,0 +1,22 @@
+# Blueprint do robô do AGRO FÁCIL. A PONTE cria este serviço sozinha pela API
+# do Render; este arquivo é o caminho à mão, se a criação automática não der.
+# Os quatro segredos são `sync: false`: o Render pede o valor, e ele nunca entra
+# no repositório (chave em Git de cliente não se apaga, só se revoga).
+services:
+  - type: web
+    name: agro-facil-robo
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /health
+    envVars:
+      - key: NA_NUVEM
+        value: "1"
+      - key: PONTE_URL
+        sync: false
+      - key: PONTE_CHAVE_ROBO
+        sync: false
+      - key: SEGREDO_DO_SITE
+        sync: false
+      - key: PING_SEGREDO
+        sync: false
